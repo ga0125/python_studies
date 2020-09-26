@@ -9,34 +9,34 @@ from encapsulation import DataBase
 person_one = Person('Ciclano', 25)
 person_two = Person.by_birth_year('Fulano', 1996)
 
-# # ---------------------
-# # Talking
-# person_one.talk('POO')
-# person_one.stop_talk()
+# ---------------------
+# Talking
+person_one.talk('POO')
+person_one.stop_talk()
 
-# person_two.talk('Python')
-# person_two.stop_talk()
+person_two.talk('Python')
+person_two.stop_talk()
 
-# # ---------------------
-# # Eating
-# person_one.eat('Churrasco')
-# person_one.stop_eat()
+# ---------------------
+# Eating
+person_one.eat('Churrasco')
+person_one.stop_eat()
 
-# person_two.eat('Prato Mil')
-# person_two.stop_eat()
+person_two.eat('Prato Mil')
+person_two.stop_eat()
 
-# # ---------------------
-# # Age and birth year
-# print(person_one.age)
-# person_one.get_birth_year()
+# ---------------------
+# Age and birth year
+print(person_one.age)
+person_one.get_birth_year()
 
-# print(person_two.age)
-# person_two.get_birth_year()
+print(person_two.age)
+person_two.get_birth_year()
 
-# # ---------------------
-# # Generate ID
-# print(person_one.generate_id())
-# print(person_two.generate_id())
+# ---------------------
+# Generate ID
+print(person_one.generate_id())
+print(person_two.generate_id())
 
 # ---------------------
 # ---------------------
@@ -44,10 +44,10 @@ person_two = Person.by_birth_year('Fulano', 1996)
 product_one = Product('Camiseta', 50)
 product_two = Product('Caneca', 'R$15')
 
-# # ---------------------
-# # Product discount
-# product_one.discount(10)
-# product_two.discount(50)
+# ---------------------
+# Product discount
+product_one.discount(10)
+product_two.discount(50)
 
 # ---------------------
 # ---------------------
@@ -67,3 +67,7 @@ db.delete_customer(2)
 # ---------------------
 # List customers
 db.list_customers()
+
+# ---------------------
+# Accessing a private argument (DO NOT use it on production env)
+print(db._DataBase__data)
